@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lesson 10</title>
+	<style>
+.error {
+	border-color: red
+}
+
+.mid-field {
+	position: absolute;
+	left: 50%;
+	top: 45%;
+	transform: translate(-50%, -50%);
+	padding: 10px;
+}
+</style>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+</head>
+<body style = "background-color: #d6d3e8">
+<div class="mid-field">
+
+	<h1>AJAX - GET</h1>
+	<form>
+		<input id="Surname" type="text" placeholder="Surname" onkeyup="check()">
+		<br><br>
+		<input id="Name" type="text" placeholder="Name" onkeyup="check()">
+		<br><br>
+		<input id="Age" type="text" placeholder="Age" onkeyup="check()" onblur="validateAge()">
+		<br><br>
+		<input id="Address" type="text" placeholder="Address" onkeyup="check()">
+		<br><br>
+		
+		<input id="AjaxGET" type="button" value="Ajax GET" onclick="sendDataByGetMethod()" disabled>
+		<input type="button" value="Clear" onclick="clearFields()">
+		<p id="Message">Please fulfill all fields</p>
+		
+	</form>
+	
+		<h1>AJAX - POST</h1>
+	<form>
+		<input id="Surname" type="text" placeholder="Surname" onkeyup="check()">
+		<br><br>
+		<input id="Name" type="text" placeholder="Name" onkeyup="check()">
+		<br><br>
+		<input id="Age" type="text" placeholder="Age" onkeyup="check()" onblur="validateAge()">
+		<br><br>
+		<input id="Address" type="text" placeholder="Address" onkeyup="check()">
+		<br><br>
+		
+		<input id="AjaxPOST" type="button" value="Ajax POST" onclick="sendDataByPostMethod()" disabled>
+		<input type="button" value="Clear" onclick="clearFields()">
+		<p id="Message">Please fulfill all fields</p>
+		
+	</form>
+	
+	</div>	
+	<script src="lesson10.js"></script>
+
+</body>
+</html>
